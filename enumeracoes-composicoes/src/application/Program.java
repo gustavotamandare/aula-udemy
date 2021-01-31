@@ -1,17 +1,15 @@
 package application;
 
+import java.sql.Date;
 
-import java.util.Date;
-import entities.Order;
+import entities.Orders;
 import entities.enums.OrderStatus;
 
 public class Program {
-
+	
 	public static void main(String[] args) {
-		Date date = new Date();
-		Order order = new Order(1080, date, OrderStatus.PENDING_PAYMENT);
-
+		Orders order = new Orders(1080, new Date(0), OrderStatus.PENDING_PAYMENT);
+		
 		System.out.println(order);
 	}
-
 }
